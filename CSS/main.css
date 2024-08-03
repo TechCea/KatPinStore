@@ -199,7 +199,6 @@ header {
     grid-auto-rows: minmax(135px, auto); /* Altura mínima para las filas adicionales */
     gap: 15px;
     position: relative;
-    cursor: pointer;
     z-index: 2;
 }
 
@@ -270,6 +269,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center; 
+    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.2); /* Color de fondo opaco por defecto */
     transition: background-color 0.3s ease;
   }
@@ -293,7 +293,7 @@ header {
   .links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 10px;
     position: relative;
     z-index: 2;
     transition: all 0.1s ease-in-out;
@@ -316,7 +316,7 @@ header {
 }
 
   .container:hover .links {
-    gap: 40px; /* Cambia el valor del gap aquí */
+    gap: 45px; /* Cambia el valor del gap aquí */
   }
   
 /* Posicionamiento específico para cada elemento en el grid */
@@ -339,10 +339,41 @@ header {
     object-fit: fill; /* Ajusta la imagen para que quepa completamente sin distorsión */
 }
 .elements .element:nth-child(3) {
+    grid-column: 4 / 5; /* Ocupa columna 3 */
+    grid-row: 1 / 2; /* Ocupa fila 2 */
+}
+.elements .element:nth-child(3) img {
+    width: 100%; /* Ajusta al ancho completo del contenedor */
+    height: 100%; /* Se ajusta automáticamente para mantener la proporción */
+    object-fit: fill; /* Ajusta la imagen para que quepa completamente sin distorsión */
+}
+.elements .element:nth-child(4) {
     grid-column: 1 / 5; /* Ocupa columna 3 */
     grid-row: 2 / 4; /* Ocupa fila 2 */
 }
-.elements .element:nth-child(3) img {
+.elements .element:nth-child(4) img {
+    width: 100%; /* Ajusta al ancho completo del contenedor */
+    height: 100%; /* Se ajusta automáticamente para mantener la proporción */
+    object-fit: fill; /* Ajusta la imagen para que quepa completamente sin distorsión */
+}
+.elements .element:nth-child(5) {
+    grid-column: 1 / 3; /* Ocupa columna 3 */
+    grid-row: 7 / 4; /* Ocupa fila 2 */
+}
+.elements .element:nth-child(5) img {
+    width: 100%; /* Ajusta al ancho completo del contenedor */
+    height: 100%; /* Se ajusta automáticamente para mantener la proporción */
+    object-fit: fill; /* Ajusta la imagen para que quepa completamente sin distorsión */
+}
+.elements .element:nth-child(6) {
+    grid-column: 3 / 5; /* Ocupa columna 3 */
+    grid-row: 6 / 4; /* Ocupa fila 2 */
+}
+.elements .element:nth-child(7) {
+    grid-column: 3 / 5; /* Ocupa columna 3 */
+    grid-row: 8 / 6; /* Ocupa fila 2 */
+}
+.elements .element:nth-child(7) img {
     width: 100%; /* Ajusta al ancho completo del contenedor */
     height: 100%; /* Se ajusta automáticamente para mantener la proporción */
     object-fit: fill; /* Ajusta la imagen para que quepa completamente sin distorsión */
