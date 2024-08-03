@@ -13,10 +13,10 @@
     --white: #FFF;
     --dark: #1B2735;
     --black: #090A0F;
-    --orange: #F24141;
+    --red: #EB4958;
+    --darkred: #A5091F;
     --otherorange: #FE4C42;
     --orangep: #ec2525;
-    --darkorange: #FE7A36;
     --darkblue: #333A73;
     --green: #adff2f;
     --blue: #387ADF;
@@ -27,9 +27,9 @@
     --gray: #cccccc;
     --textgray: #cccccc;
     --darkgray: #555;
-    --scroll:#090A0F;
+    --scroll:#FFF5FB;
     --background-dark: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    --gradient-1:linear-gradient(to top, lime, cyan);
+    --gradient-1:linear-gradient(to top, #EB4958, #A5091F);
     --gradient-2:linear-gradient(to top, lime, 20%, cyan);
     --gradient-3:linear-gradient(135deg, orange 60%, cyan);
     --gradient-4: linear-gradient(#e66465, #9198e5);
@@ -62,10 +62,10 @@ body::-webkit-scrollbar{
     width: 10px;
 }
 body::-webkit-scrollbar-thumb{
-    background: var(--orange);
+    background: var(--red);
 }
 body::-webkit-scrollbar-thumb:hover{
-    background: var(--darkorange);
+    background: var(--darkred);
 }
 
 header {
@@ -111,7 +111,7 @@ header {
     padding: 5px;
     text-decoration: none;
     list-style: none;
-    color: var(--orange);
+    color: var(--red);
 }
 .navbar-item::before {
     content: attr(data-label);
@@ -226,7 +226,7 @@ header {
 .elements .element:before,
 .elements .element:after {
     content: '';
-    background-color: var(--orange); /* Puedes definir esta variable en tu CSS global */
+    background-color: var(--red); /* Puedes definir esta variable en tu CSS global */
     width: 2px;
     height: 2px;
     position: absolute;
@@ -276,7 +276,11 @@ header {
 }
 
 .elements .element:nth-child(4) {
-    grid-column: 3 / 5; /* Ocupa columna 3 */
+    grid-column: 3 / 4; /* Ocupa columna 3 */
+    grid-row: 6 / 5; /* Ocupa fila 2 */
+}
+.elements .element:nth-child(5) {
+    grid-column: 4 / 5; /* Ocupa columna 3 */
     grid-row: 6 / 5; /* Ocupa fila 2 */
 }
 
