@@ -294,11 +294,6 @@ header {
     grid-row: 6 / 5; /* Ocupa fila 2 */
 }
 
-
-
-
-
-
 .end{
     position: fixed;
     width: 100vh;
