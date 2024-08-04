@@ -463,9 +463,14 @@ body::-webkit-scrollbar-thumb:hover{
 
 main {
     width: 100%;
-    padding: 20px;
+    
 }
-
+main h1{
+    color: var(--red);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
 .contenedor_productos {
     margin-top: 50px;
     display: grid;
