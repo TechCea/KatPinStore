@@ -205,7 +205,7 @@ header {
 .elements .element {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,8 +219,9 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Rellenar el contenedor sin distorsionar */
-    border-radius: 8px;
+    border-radius: 12px;
 }
+
 
 .elements .element:before,
 .elements .element:after {
@@ -317,7 +318,15 @@ header {
   .container:hover .links {
     gap: 45px; /* Cambia el valor del gap aquí */
   }
-  
+  .social-links h1 {
+    font-size: 2vw; /* Tamaño de texto relativo al ancho de la ventana */
+    color: var(--black); /* Color del texto */
+    line-height: 1.4; /* Espaciado entre líneas */
+    margin: 0; /* Elimina márgenes por defecto */
+    text-align: left; /* Centra el texto */
+    word-wrap: break-word; /* Permite que el texto se divida en líneas si es necesario */
+    overflow-wrap: break-word; /* Permite el ajuste de palabras largas */
+}
 /* Posicionamiento específico para cada elemento en el grid */
 .elements .element:nth-child(1) {
     padding: 10px;
@@ -458,7 +467,149 @@ header {
     transform: translateX(-100%);
     opacity: 0;
 }
-
+@media (max-width: 768px) {
+    .elements {
+        width: 95%;
+        aspect-ratio: 4 / 4;
+        margin-top: -35px;
+        display: grid;
+        margin: 100px auto;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+        grid-template-rows: repeat(3, 160px); /* 3 filas de 160px de altura */
+        grid-auto-rows: minmax(135px, auto); /* Altura mínima para las filas adicionales */
+        gap: 15px;
+        position: relative;
+        z-index: 2;
+    }
+    .elements .element:nth-child(1) {
+        grid-column: 1 / 5; /* Ocupa ambas columnas */
+        grid-row: 1 / 2; /* Ocupa la primera fila */
+    }
+    .elements .element:nth-child(1) h1 {
+        font-size: 19px; /* Tamaño del texto */
+        color: var(--black); /* Color del texto */
+        line-height: 1.4; /* Espaciado entre líneas */
+        margin: 0; /* Elimina márgenes por defecto */
+        padding: 10px;
+        font-weight: bold;
+    }
+    .elements .element:nth-child(2) {
+        grid-column: 1 / 3; /* Ocupa la primera columna */
+        grid-row: 2 / 3; /* Ocupa la segunda fila */
+    }
+    .elements .element:nth-child(3) {
+        grid-column: 3 / 5; /* Ocupa la segunda columna */
+        grid-row: 2 / 3; /* Ocupa la segunda fila */
+    }
+    .elements .element:nth-child(4) {
+        grid-column: 1 / 5; /* Ocupa ambas columnas */
+        grid-row: 3 / 4; /* Ocupa la tercera fila */
+    }
+    .elements .element:nth-child(5) {
+        grid-column: 1 / 5; /* Ocupa ambas columnas */
+        grid-row: 4 / 5; /* Ocupa la cuarta fila */
+    }
+    .elements .element:nth-child(5) h1 {
+        font-size: 1rem;/* Ocupa la cuarta fila */
+    }
+    .elements .element:nth-child(6){
+        grid-column: 1 / 3; /* Ocupa la primera columna */
+        grid-row: 5/ 7; /* Ajusta la fila automáticamente */
+    }
+    .elements .element:nth-child(7){
+        grid-column: 3 / 5; /* Ocupa la primera columna */
+        grid-row: 5/ 7; /* Ajusta la fila automáticamente */
+    }
+    .elements .element:nth-child(8){
+        grid-column: 1 / 5; /* Ocupa la primera columna */
+        grid-row: 7 / 9; /* Ajusta la fila automáticamente */
+    }
+    .elements .element:nth-child(9){
+        grid-column: 1 / 3; /* Ocupa la primera columna */
+        grid-row: 10 / 9; /* Ajusta la fila automáticamente */
+    }
+    .elements .element:nth-child(10) {
+        grid-column: 3 / 5; /* Ocupa la primera columna */
+        grid-row: 10 / 9; /* Ajusta la fila automáticamente */
+    }
+    
+}
+    
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    main{
+        left: 0;
+        width: 100%;
+        margin:0;
+    }
+    .contenedor_productos{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr)
+    }
+    .contenedor_productos2{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr)
+    }
+    .contenedor_productos3{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr)
+    }
+    .producto-imagen{
+        border-radius: 1rem;
+    }
+    .producto-detalle{
+        position: relative;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .producto-precio{
+        color: aqua;
+    }
+    .producto-agregar{
+        margin: 0;
+        background-color: burlywood;
+        border-radius: 1rem;
+        transition: background-color .2s, color .2s;
+    }
+    .producto-agregar:hover{
+        background-color: #3F2212;
+        color: white;
+    }
+    .btn-toolbar{
+        padding: 50px;
+        margin-left: 365px;
+    }
+    .bn {
+        margin-left: 15px;
+        width: 42px;
+        height: 38px;
+        background-color: burlywood;
+        transition: background-color .2s, color .2s;
+    }
+    .bn:hover{
+        background-color: #3F2212;
+        color: white;
+    }
+    footer{
+        position: relative;
+        margin:0 auto;
+        width: 1320px;
+        height: 482px;
+        background: #ec0b0b;
+        color: white;
+        text-align: center;
+        font-family: sans-serif,cursive;
+        line-height: 70px;
+    }
+    
 .end{
     position: fixed;
     width: 100vh;
