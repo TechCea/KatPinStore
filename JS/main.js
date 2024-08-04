@@ -64,39 +64,37 @@ const productos = [
         id: "PIN-01",
         titulo: "Pin de Gato",
         imagen: "./IMG/gatoasesinoP.jpg",
-        categoria: {
-            nombre: "Gatos",
-            id: "Gatos"
-        },
-        precio: 1.50 
+        imagenesCarrusel: ["./IMG/gatoasesinoP.jpg", "./IMG/gatoasesino.jpg"],
+        categoria: { nombre: "Gatos", id: "Gatos" },
+        precio: 1.50,
+        descripcion: "Pin de gato adorable."
     },
     {
-        id: "Llavero-02",
-        titulo: "Articuno",
+        id: "PIN-02",
+        titulo: "Pin de Gatito ",
         imagen: "./IMG/gatotrash.jpg",
+        imagenesCarrusel: ["./IMG/gatotrash.jpg", "./IMG/gatitotrashman.jpg"],
+        categoria: { nombre: "Gatos", id: "Gatos" },
+        precio: 4.00,
+        descripcion: "Llavero de Articuno, el legendario Pokémon."
+    },
+    {
+        id: "PIN-03",
+        titulo: "Pin de Capibara",
+        imagen: "./IMG/capibara1.jpg",
+        imagenesCarrusel: ["./IMG/capibara1.jpg", "./IMG/CapibaraMano.jpg"],
+        categoria: { nombre: "Valorant", id: "valorant" },
+        precio: 3.50,
+        descripcion: "Llavero de Astra de Valorant."
+    },
+    {
+        id: "PIN-04",
+        titulo: "Pin de Pikachu",
+        imagen: "./IMG/pikachu.jpg",
+        imagenesCarrusel: ["./IMG/pikachu.jpg", "./IMG/pikachumano.jpg"],
         categoria: {
             nombre: "Pokemon",
-            id: "pokemon"
-        },
-        precio: 4.00
-    },
-    {
-        id: "Llavero-03",
-        titulo: "Astra",
-        imagen: "./IMG/capibara1.jpg",
-        categoria: {
-            nombre: "Valorant",
-            id: "valorant"
-        },
-        precio: 3.50
-    },
-    {
-        id: "Llavero-04",
-        titulo: "Brimstone",
-        imagen: "./IMG/brim.jpg",
-        categoria: {
-            nombre: "Valorant",
-            id: "valorant"
+            id: "Pokemon"
         },
         precio: 3.50
     },
@@ -271,64 +269,82 @@ const productos = [
       precio: 4.00
   }
   ];
-  
+
   const contenedorProductos = document.querySelector("#contenedor_productos");
-  const botonesCategorias = document.querySelectorAll(".boton-categoria");
-  const tituloPrincipal = document.querySelector("#titulo-principal");
-  let botonesAgregar = document.querySelectorAll(".producto-agregar");
-  const numerito =document.querySelector("#numerito");
-  
-  
-  function cargarProductos(productosElegidos){
-  
+  const popup = document.querySelector("#product-popup");
+  const popupImg = document.querySelector("#popup-img");
+  const popupTitle = document.querySelector("#popup-title");
+  const popupCategory = document.querySelector("#popup-category");
+  const popupPrice = document.querySelector("#popup-price");
+  const popupDescription = document.querySelector("#popup-description");
+  const closePopup = document.querySelector(".close");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+
+  let currentImageIndex = 0;
+  let currentProductImages = [];
+
+  function cargarProductos(productosElegidos) {
       contenedorProductos.innerHTML = "";
-      
+
       productosElegidos.forEach(producto => {
           const div = document.createElement("div");
           div.classList.add("producto");
           div.innerHTML = `
-          <div class="productos">
-          <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}" width="266" height="266"></img>
-          <div class="producto-detalle">
-          <h1 class="producto-titulo">${producto.titulo}</h1>
-          <p class="producto-precio">$${producto.precio}</p>
-          <button class="producto-agregar" id="${producto.id}">Ver Producto</button>
-          </div>
-      </div>
-      `;
-      contenedorProductos.append(div);
-          
-      })
-      actualizarBotonesAgregar()
-          console.log(botonesAgregar);
-  }
-  
-  cargarProductos(productos);
-  
-  botonesCategorias.forEach(boton => {
-      boton.addEventListener("click", (e) => {
-  
-          botonesCategorias.forEach(boton => boton.classList.remove("active"))
-          e.currentTarget.classList.add("active");
-          
-          if(e.currentTarget.id != "sin"){
-              const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id)
-              tituloPrincipal.innerText = productoCategoria.categoria.nombre
-  
-              const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id)
-              cargarProductos(productosBoton);
-          } else {
-              tituloPrincipal.innerText ="Todos los Productos"
-              cargarProductos(productos);
-          }
-      })
-  });
-  
-  function actualizarBotonesAgregar(){
-      botonesAgregar = document.querySelectorAll(".producto-agregar");
-  
-      botonesAgregar.forEach(boton =>{
-          boton.addEventListener("click", agregarAlcarrito);
+              <div class="producto-imagen-container">
+                  <div class="producto-titulo-container">
+                      <h2 class="producto-titulo">${producto.titulo}</h2>
+                  </div>
+                  <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+                  <button class="producto-agregar" data-id="${producto.id}">Ver Producto</button>
+              </div>
+          `;
+          contenedorProductos.append(div);
       });
-      
+
+      document.querySelectorAll(".producto-agregar").forEach(button => {
+          button.addEventListener("click", (e) => {
+              const id = e.target.getAttribute("data-id");
+              const producto = productos.find(p => p.id === id);
+              currentImageIndex = 0;
+              currentProductImages = producto.imagenesCarrusel;
+              popupImg.src = currentProductImages[currentImageIndex];
+              popupTitle.textContent = producto.titulo;
+              popupCategory.textContent = ` ${producto.categoria.nombre}`;
+              popupPrice.textContent = `$${producto.precio}`;
+              popupDescription.textContent = producto.descripcion;
+              popup.style.display = "flex";
+          });
+      });
   }
+
+  function showImage(index) {
+      if (index >= 0) {
+          currentImageIndex = index % currentProductImages.length;
+          popupImg.style.transform = "translateX(100%)";
+          setTimeout(() => {
+              popupImg.src = currentProductImages[currentImageIndex];
+              popupImg.style.transform = "translateX(0)";
+          }, 100);
+      }
+  }
+
+  prevButton.addEventListener("click", () => {
+      showImage(currentImageIndex - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+      showImage(currentImageIndex + 1);
+  });
+
+  closePopup.addEventListener("click", () => {
+      popup.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+      if (e.target === popup) {
+          popup.style.display = "none";
+      }
+  });
+
+  cargarProductos(productos);

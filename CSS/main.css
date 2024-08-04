@@ -570,81 +570,175 @@ header {
         transition: all 0.3s ease;
     }
 }
-     
-    .wrapper{
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-    }
-    main{
-        left: 0;
-        width: 100%;
-        margin:0;
-    }
-    .contenedor_productos{
-        margin-top: 50px;
-        display: grid;
-        grid-template-columns: repeat(3,1fr)
-    }
-    .contenedor_productos2{
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(3,1fr)
-    }
-    .contenedor_productos3{
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(3,1fr)
-    }
-    .producto-imagen{
-        border-radius: 1rem;
-    }
-    .producto-detalle{
-        position: relative;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .producto-precio{
-        color: aqua;
-    }
-    .producto-agregar{
-        margin: 0;
-        background-color: burlywood;
-        border-radius: 1rem;
-        transition: background-color .2s, color .2s;
-    }
-    .producto-agregar:hover{
-        background-color: #3F2212;
-        color: white;
-    }
-    .btn-toolbar{
-        padding: 50px;
-        margin-left: 365px;
-    }
-    .bn {
-        margin-left: 15px;
-        width: 42px;
-        height: 38px;
-        background-color: burlywood;
-        transition: background-color .2s, color .2s;
-    }
-    .bn:hover{
-        background-color: #3F2212;
-        color: white;
-    }
-    footer{
-        position: relative;
-        margin:0 auto;
-        width: 1320px;
-        height: 482px;
-        background: #ec0b0b;
-        color: white;
-        text-align: center;
-        font-family: sans-serif,cursive;
-        line-height: 70px;
-    }
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+.contenedor_productos {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.producto-imagen-container {
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.producto-titulo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: auto;
+}
+
+.producto-agregar {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: burlywood;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.producto-agregar:hover {
+    background-color: #3F2212;
+    color: white;
+}
+
+.producto-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    width: 1100px;
+    height: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-img-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.popup-img-container img {
+    width: 340px;
+    height: 360px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.popup-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px; /* Agregar padding a los detalles */
+}
+
+.popup-details h1 {
+    font-size: 24px;
+}
+
+.popup-details p {
+    font-size: 18px;
+}
+
+.popup-contact {
+    margin-top: 20px;
+}
+
+.popup-contact p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
     
 .end{
     position: fixed;
