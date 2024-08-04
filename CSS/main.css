@@ -316,17 +316,9 @@ header {
 }
 
   .container:hover .links {
-    gap: 45px; /* Cambia el valor del gap aquí */
-  }
-  .social-links h1 {
-    font-size: 2vw; /* Tamaño de texto relativo al ancho de la ventana */
-    color: var(--black); /* Color del texto */
-    line-height: 1.4; /* Espaciado entre líneas */
-    margin: 0; /* Elimina márgenes por defecto */
-    text-align: left; /* Centra el texto */
-    word-wrap: break-word; /* Permite que el texto se divida en líneas si es necesario */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras largas */
+    gap: 55px; /* Cambia el valor del gap aquí */
 }
+
 /* Posicionamiento específico para cada elemento en el grid */
 .elements .element:nth-child(1) {
     padding: 10px;
@@ -467,6 +459,35 @@ header {
     transform: translateX(-100%);
     opacity: 0;
 }
+
+
+@media (max-width: 1024px) {
+    .elements {
+        width: 95%;
+        aspect-ratio: 4 / 4;
+        margin-top: -35px;
+        display: grid;
+        margin: 100px auto;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+        grid-template-rows: repeat(3, 160px); /* 3 filas de 160px de altura */
+        grid-auto-rows: minmax(135px, auto); /* Altura mínima para las filas adicionales */
+        gap: 15px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .elements .element:nth-child(1) h1 {
+        font-size: 19px; /* Tamaño del texto */
+        color: var(--black); /* Color del texto */
+        line-height: 1.4; /* Espaciado entre líneas */
+        margin: 0; /* Elimina márgenes por defecto */
+        padding: 10px;
+        font-weight: bold;
+    }
+}
+
+
+
 @media (max-width: 768px) {
     .elements {
         width: 95%;
@@ -533,8 +554,23 @@ header {
         grid-row: 10 / 9; /* Ajusta la fila automáticamente */
     }
     
+    .links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 55px;
+        position: relative;
+        z-index: 2;
+        transition: all 0.1s ease-in-out;
+      }
+
+      .links i {
+        font-size: 45px;
+        padding: 5px;
+        color: var(--red);
+        transition: all 0.3s ease;
+    }
 }
-    
+     
     .wrapper{
         width: 100%;
         height: 100%;
