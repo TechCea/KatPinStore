@@ -63,137 +63,20 @@ body::-webkit-scrollbar{
 }
 body::-webkit-scrollbar-thumb{
     background: var(--red);
+    border-radius: 8px;
 }
 body::-webkit-scrollbar-thumb:hover{
     background: var(--darkred);
 }
 
-header {
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 15px;
-    z-index: 3;
-}
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #444;
-    padding: 5px;
-    border-radius: 10px;
-    transition: width 0.3s;
-    opacity: 0;
-    animation: SlideTop 1s ease forwards;
-    animation-delay: 1s;
-    z-index: 4;
-}
-
-.navbar-item {
-    position: relative;
-    margin: 0 10px;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
-.navbar-item a{
-    margin: 5px;
-    padding: 5px;
-    text-decoration: none;
-    list-style: none;
-    color: var(--red);
-}
-.navbar-item::before {
-    content: attr(data-label);
-    position: absolute;
-    bottom: -30px;
-    opacity: 0;
-    white-space: nowrap;
-    padding: 5px 10px;
-    background-color: var(--darkgray);
-    color: var(--black);
-    border-radius: 5px;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateY(-10px);
-    pointer-events: none;
-    font-size: 14px;
-}
-
-.navbar-item:hover::before {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.navbar-item:hover {
-    transform: scale(1.3);
-}
-
-.navbar-item i {
-    font-size: 34px;
-    transition: transform 0.3s;
-}
-
-@keyframes SlideRight {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);opacity: 1;
-    }
-}
-@keyframes SlideTop {
-    0%{
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);opacity: 1;
-    }
-}
-@keyframes SlideBottom {
-    0%{
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);opacity: 1;
-    }
-}
-@keyframes SlideLeft {
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);opacity: 1;
-    }
-}
-.glass{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 12px;
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
 
 .elements {
     width: 100%;
     aspect-ratio: 4 / 4;
     margin-top: -35px;
     display: grid;
-    margin: 100px auto;
+    margin: 110px auto;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
     grid-template-rows: repeat(3, 160px); /* 3 filas de 160px de altura */
     grid-auto-rows: minmax(135px, auto); /* Altura mínima para las filas adicionales */
@@ -589,7 +472,17 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+@media (max-width: 1200px) {
+    .contenedor_productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 768px) {
+    .contenedor_productos {
+        grid-template-columns: 1fr;
+    }
+}
 .producto {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -600,7 +493,7 @@ main {
 
 .producto-imagen-container {
     position: relative;
-    background-color: #f9f9f9;
+    height: 100%;
 }
 
 .producto-titulo-container {
@@ -610,20 +503,22 @@ main {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 5px;
+    padding: 4px;
 }
 
 .producto-imagen {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .producto-agregar {
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
+    font-size: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: burlywood;
+    background-color: var(--otherorange);
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -649,7 +544,7 @@ main {
 }
 
 .popup-content {
-    background-color: #fff;
+    background-color: #EEE4E3;
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -662,10 +557,14 @@ main {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 24px;
+    font-size: 55px;
+    color: var(--dark);
     cursor: pointer;
 }
-
+.close:hover {
+    color: #ff0000; /* Cambia el color del texto a rojo */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
 .popup-img-container {
     flex: 1;
     display: flex;
@@ -678,8 +577,8 @@ main {
 }
 
 .popup-img-container img {
-    width: 340px;
-    height: 360px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     transition: transform 0.5s ease;
 }
@@ -693,30 +592,38 @@ main {
 }
 
 .popup-details h1 {
-    font-size: 24px;
+    font-size: 34px;
+    color: var(--red);
 }
 
 .popup-details p {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .popup-contact {
-    margin-top: 20px;
+    margin-top: 5px;
 }
-
+#popup-price{
+    color: var(--darkred);
+}
 .popup-contact p {
-    font-size: 16px;
+    font-size: 26px;
     margin-bottom: 10px;
 }
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    margin-top: 20px;
+    gap: 50px;
 }
 
 .social-icons a img {
-    width: 24px;
-    height: 24px;
+    width: 74px;
+    height: 74px;
+}
+.social-icons a img:hover {
+    transform: translateY(-10px); /* Eleva la imagen */
+    filter: brightness(1.2) sepia(1) hue-rotate(180deg); /* Cambia el color */
 }
 
 .carousel-button {
@@ -739,7 +646,117 @@ main {
     right: 10px;
 }
 
-    
+@media (max-width: 768px) {   
+    .popup-content {
+        background-color: #EEE4E3;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        width: 600px; /* Ajusta el ancho para pantallas pequeñas */
+
+        height: 600px; /* Permite que la altura se ajuste automáticamente */
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 35px; /* Ajusta el tamaño del ícono de cerrar */
+        color: var(--dark);
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: #ff0000; /* Cambia el color del texto a rojo */
+        transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+    }
+
+    .popup-img-container {
+        width: 100%;
+        height: 100%; /* Ajusta la altura para pantallas pequeñas */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px; /* Espacio inferior para separación */
+        margin-top: 20px;
+    }
+
+    .popup-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+    }
+
+    .popup-details {
+        flex:1;
+        gap: 10px;
+        padding: 0; /* Elimina el padding para ajustar al contenedor */
+    }
+
+    .popup-details h1 {
+        font-size: 24px; /* Ajusta el tamaño del título */
+        color: var(--red);
+    }
+
+    .popup-details p {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+    }
+
+    #popup-price {
+        color: var(--darkred);
+    }
+
+    .popup-contact p {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los íconos se envuelvan en pantallas pequeñas */
+        gap: 40px; /* Ajusta el espacio entre los íconos */
+        margin-top: 20px;
+    }
+
+    .social-icons a img {
+        width: 50px; /* Ajusta el tamaño de los íconos */
+        height: 50px;
+    }
+
+    .social-icons a img:hover {
+        transform: translateY(-5px); /* Eleva un poco la imagen */
+        filter: brightness(1.2) sepia(1) hue-rotate(180deg); /* Cambia el color */
+    }
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+}
+
+
+
 .end{
     position: fixed;
     width: 100vh;

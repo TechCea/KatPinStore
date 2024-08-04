@@ -64,7 +64,7 @@ const productos = [
         id: "PIN-01",
         titulo: "Pin de Gato",
         imagen: "./IMG/gatoasesinoP.jpg",
-        imagenesCarrusel: ["./IMG/gatoasesinoP.jpg", "./IMG/gatoasesino.jpg"],
+        imagenesCarrusel: ["./IMG/gatoasesinoP.jpg", "./IMG/gatoasesinomano.jpeg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
         precio: 1.50,
         descripcion: "Pin de gato adorable."
@@ -99,9 +99,10 @@ const productos = [
         precio: 3.50
     },
     {
-        id: "Llavero-05",
-        titulo: "Gengar",
-        imagen: "./IMG/gengar.webp",
+        id: "PIN-05",
+        titulo: "Pin de Gato",
+        imagen: "./IMG/gatoflorespin.jpg",
+        imagenesCarrusel: ["./IMG/gatoflorespin.jpg", "./IMG/gatofloresmano.jpg"],
         categoria: {
             nombre: "Pokemon",
             id: "pokemon"
@@ -109,9 +110,10 @@ const productos = [
         precio: 3.75
     },
     {
-        id: "Llavero-06",
-        titulo: "Donatelo",
-        imagen: "./IMG/donatelo.jpg",
+        id: "PIN-06",
+        titulo: "Pin de Astronauta",
+        imagen: "./IMG/astronauta.jpg",
+        imagenesCarrusel: ["./IMG/astronauta.jpg", "./IMG/astronauta1.jpg"],
         categoria: {
             nombre: "Accion",
             id: "accion"
@@ -271,80 +273,78 @@ const productos = [
   ];
 
   const contenedorProductos = document.querySelector("#contenedor_productos");
-  const popup = document.querySelector("#product-popup");
-  const popupImg = document.querySelector("#popup-img");
-  const popupTitle = document.querySelector("#popup-title");
-  const popupCategory = document.querySelector("#popup-category");
-  const popupPrice = document.querySelector("#popup-price");
-  const popupDescription = document.querySelector("#popup-description");
-  const closePopup = document.querySelector(".close");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
+const popup = document.querySelector("#product-popup");
+const popupImg = document.querySelector("#popup-img");
+const popupTitle = document.querySelector("#popup-title");
+const popupCategory = document.querySelector("#popup-category");
+const popupPrice = document.querySelector("#popup-price");
+const popupDescription = document.querySelector("#popup-description");
+const closePopup = document.querySelector(".close");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
 
-  let currentImageIndex = 0;
-  let currentProductImages = [];
+let currentImageIndex = 0;
+let currentProductImages = [];
 
-  function cargarProductos(productosElegidos) {
-      contenedorProductos.innerHTML = "";
+function cargarProductos(productosElegidos) {
+    contenedorProductos.innerHTML = "";
 
-      productosElegidos.forEach(producto => {
-          const div = document.createElement("div");
-          div.classList.add("producto");
-          div.innerHTML = `
-              <div class="producto-imagen-container">
-                  <div class="producto-titulo-container">
-                      <h2 class="producto-titulo">${producto.titulo}</h2>
-                  </div>
-                  <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-                  <button class="producto-agregar" data-id="${producto.id}">Ver Producto</button>
-              </div>
-          `;
-          contenedorProductos.append(div);
-      });
+    productosElegidos.forEach(producto => {
+        const div = document.createElement("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+            <div class="producto-imagen-container">
+                <div class="producto-titulo-container">
+                    <h2 class="producto-titulo">${producto.titulo}</h2>
+                </div>
+                <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+                <button class="producto-agregar" data-id="${producto.id}">Ver Producto</button>
+            </div>
+        `;
+        contenedorProductos.append(div);
+    });
 
-      document.querySelectorAll(".producto-agregar").forEach(button => {
-          button.addEventListener("click", (e) => {
-              const id = e.target.getAttribute("data-id");
-              const producto = productos.find(p => p.id === id);
-              currentImageIndex = 0;
-              currentProductImages = producto.imagenesCarrusel;
-              popupImg.src = currentProductImages[currentImageIndex];
-              popupTitle.textContent = producto.titulo;
-              popupCategory.textContent = ` ${producto.categoria.nombre}`;
-              popupPrice.textContent = `$${producto.precio}`;
-              popupDescription.textContent = producto.descripcion;
-              popup.style.display = "flex";
-          });
-      });
-  }
+    document.querySelectorAll(".producto-agregar").forEach(button => {
+        button.addEventListener("click", (e) => {
+            const id = e.target.getAttribute("data-id");
+            const producto = productos.find(p => p.id === id);
+            currentImageIndex = 0;
+            currentProductImages = producto.imagenesCarrusel || [producto.imagen];
+            popupImg.src = currentProductImages[currentImageIndex];
+            popupTitle.textContent = producto.titulo;
+            popupCategory.textContent = ` ${producto.categoria.nombre}`;
+            popupPrice.textContent = `Precio: $ ${producto.precio}`;
+            popupDescription.textContent = producto.descripcion;
+            popup.style.display = "flex";
+        });
+    });
+}
 
-  function showImage(index) {
-      if (index >= 0) {
-          currentImageIndex = index % currentProductImages.length;
-          popupImg.style.transform = "translateX(100%)";
-          setTimeout(() => {
-              popupImg.src = currentProductImages[currentImageIndex];
-              popupImg.style.transform = "translateX(0)";
-          }, 100);
-      }
-  }
+function showImage(index) {
+    currentImageIndex = (index + currentProductImages.length) % currentProductImages.length;
+    popupImg.style.transform = "translateX(100%)";
+    setTimeout(() => {
+        popupImg.src = currentProductImages[currentImageIndex];
+        popupImg.style.transform = "translateX(0)";
+    }, 100);
+}
 
-  prevButton.addEventListener("click", () => {
-      showImage(currentImageIndex - 1);
-  });
+prevButton.addEventListener("click", () => {
+    showImage(currentImageIndex - 1);
+});
 
-  nextButton.addEventListener("click", () => {
-      showImage(currentImageIndex + 1);
-  });
+nextButton.addEventListener("click", () => {
+    showImage(currentImageIndex + 1);
+});
 
-  closePopup.addEventListener("click", () => {
-      popup.style.display = "none";
-  });
+closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+});
 
-  window.addEventListener("click", (e) => {
-      if (e.target === popup) {
-          popup.style.display = "none";
-      }
-  });
+window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        popup.style.display = "none";
+    }
+});
 
-  cargarProductos(productos);
+cargarProductos(productos);
