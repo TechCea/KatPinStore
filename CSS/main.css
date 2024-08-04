@@ -463,13 +463,13 @@ body::-webkit-scrollbar-thumb:hover{
 
 main {
     width: 100%;
-    
 }
 main h1{
     color: var(--red);
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 50px;
 }
 .contenedor_productos {
     margin-top: 50px;
@@ -505,6 +505,7 @@ main h1{
     position: absolute;
     top: 0;
     left: 0;
+    
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -651,7 +652,19 @@ main h1{
     right: 10px;
 }
 
-@media (max-width: 768px) {   
+@media (max-width: 768px) {  
+     
+    main h1{
+        font-size: 2rem;
+    }
+    .producto {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        margin: 10px;
+    }
     .popup-content {
         background-color: #EEE4E3;
         padding: 20px;
@@ -669,7 +682,7 @@ main h1{
         position: absolute;
         top: 5px;
         right: 10px;
-        font-size: 35px; /* Ajusta el tamaño del ícono de cerrar */
+        font-size: 45px; /* Ajusta el tamaño del ícono de cerrar */
         color: var(--dark);
         cursor: pointer;
     }

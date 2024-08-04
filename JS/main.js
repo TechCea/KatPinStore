@@ -75,7 +75,7 @@ const productos = [
         imagen: "./IMG/gatotrash.jpg",
         imagenesCarrusel: ["./IMG/gatotrash.jpg", "./IMG/gatitotrashman.jpg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
-        precio: 4.00,
+        precio: 3.50,
         descripcion: "Llavero de Articuno, el legendario Pokémon."
     },
     {
@@ -313,7 +313,7 @@ function cargarProductos(productosElegidos) {
             popupImg.src = currentProductImages[currentImageIndex];
             popupTitle.textContent = producto.titulo;
             popupCategory.textContent = ` ${producto.categoria.nombre}`;
-            popupPrice.textContent = `Precio: $ ${producto.precio}`;
+            popupPrice.textContent = `Precio: $ ${producto.precio.toFixed(2)}`;
             popupDescription.textContent = producto.descripcion;
             popup.style.display = "flex";
         });
