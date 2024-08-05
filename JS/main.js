@@ -64,7 +64,7 @@ const productos = [
         id: "PIN-01",
         titulo: "Pin de Gato",
         imagen: "./IMG/gatoasesinoP.jpg",
-        imagenesCarrusel: ["./IMG/gatoasesinoP.jpg", "./IMG/gatoasesinomano.jpeg"],
+        imagenesCarrusel: ["./IMG/gatoasesinoPi.jpg", "./IMG/gatoasesinomano.jpeg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
         precio: 1.50,
         descripcion: "Pin de gato adorable."
