@@ -809,19 +809,20 @@ main h1{
     justify-content: center;
     padding: 2rem;
     border-radius: 1rem;
-    background: var(--gradient-1);
+    background: #D1EDEA;
     backdrop-filter: blur(3rem);
     gap: 2rem;
-    color: var(--white);
+    color: var(--black);
     text-align: center;
     max-width: 1000px;
+    border: solid 1px var(--darkred);
 }
 
 .content-wrapper h2 {
     font-weight: bold;
     font-size: 2.2rem;
     margin: 0 0 1rem 0;
-    background: var(--gradient-2);
+    background: var(--gradient-3);
     -webkit-text-fill-color:transparent;
     -webkit-background-clip:text;
     background-clip: text;
@@ -850,7 +851,7 @@ main h1{
 }
 
 .button:hover {
-    box-shadow: 0 0 15px var(--red), 0 0 35px var(--red);
+    box-shadow: 0 0 5px var(--red), 0 0 15px var(--red);
 }
 
 .button span {
@@ -876,12 +877,13 @@ main h1{
     justify-content: center;
     padding: 1.5rem;
     border-radius: 1rem;
-    background: var(--gradient-1);
+    background: #D1EDEA;
     backdrop-filter: blur(3rem);
     color: var(--white);
     text-align: center;
     max-width: 1000px;
     margin: 10px;
+    border: solid 1px var(--darkred);
     z-index:1;
 }
 
@@ -889,7 +891,7 @@ main h1{
     font-weight: bold;
     font-size: 1.5rem;
     margin: 0 0 1rem 0;
-    background: var(--gradient-2);
+    background: var(--gradient-3);
     -webkit-text-fill-color:transparent;
     -webkit-background-clip:text;
     background-clip: text;
@@ -897,7 +899,7 @@ main h1{
 
 .content-wrapper p {
     font-size: 1rem;
-    color: var(--white);
+    color: var(--black);
     margin: 1.5rem 0 2rem 0;
 }
 
@@ -919,7 +921,7 @@ main h1{
 }
 
 .button:hover {
-    box-shadow: 0 0 15px var(--red), 0 0 35px var(--red);
+    box-shadow: 0 0 5px var(--red), 0 0 15px var(--red);
 }
 
 .button span {
