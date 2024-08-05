@@ -11,6 +11,7 @@
 }
 :root {
     --white: #FFF;
+    --lighblue:#D1EDEA;
     --dark: #1B2735;
     --black: #090A0F;
     --red: #EB4958;
@@ -555,7 +556,7 @@ main h1{
 }
 
 .popup-content {
-    background-color: #EEE4E3;
+    background-color: var(--lighblue);
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -673,7 +674,7 @@ main h1{
         margin: 10px;
     }
     .popup-content {
-        background-color: #EEE4E3;
+        background-color: var(--lighblue);
         padding: 20px;
         margin: 20px;
         border-radius: 10px;
@@ -809,7 +810,7 @@ main h1{
     justify-content: center;
     padding: 2rem;
     border-radius: 1rem;
-    background: #D1EDEA;
+    background: var(--lighblue);
     backdrop-filter: blur(3rem);
     gap: 2rem;
     color: var(--black);
@@ -877,7 +878,7 @@ main h1{
     justify-content: center;
     padding: 1.5rem;
     border-radius: 1rem;
-    background: #D1EDEA;
+    background: var(--lighblue);
     backdrop-filter: blur(3rem);
     color: var(--white);
     text-align: center;
