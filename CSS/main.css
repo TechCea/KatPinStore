@@ -415,7 +415,7 @@ body::-webkit-scrollbar-thumb:hover{
         grid-row: 4 / 5; /* Ocupa la cuarta fila */
     }
     .elements .element:nth-child(5) h1 {
-        font-size: 1rem;/* Ocupa la cuarta fila */
+        font-size: 0.9rem;/* Ocupa la cuarta fila */
     }
     .elements .element:nth-child(6){
         grid-column: 1 / 3; /* Ocupa la primera columna */
@@ -661,7 +661,7 @@ main h1{
 @media (max-width: 768px) {  
      
     main h1{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .producto {
         border: 1px solid #ccc;
