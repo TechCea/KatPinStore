@@ -575,6 +575,7 @@ main h1{
 }
 .close:hover {
     color: #ff0000; /* Cambia el color del texto a rojo */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
 }
 .popup-img-container {
     flex: 1;
@@ -713,6 +714,7 @@ main h1{
 
     .close:hover {
         color: #ff0000; /* Cambia el color del texto a rojo */
+        transform: none;
     }
 
     .popup-img-container {
@@ -730,8 +732,9 @@ main h1{
     .popup-img-container img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         transition: transform 0.5s ease;
+        border-radius: 20px;
     }
 
     .popup-details {
