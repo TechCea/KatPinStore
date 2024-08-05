@@ -607,6 +607,7 @@ main h1{
 
 .popup-details h1 {
     font-size: 34px;
+    font-weight: 700;
     color: var(--red);
 }
 
@@ -618,7 +619,11 @@ main h1{
     margin-top: 5px;
 }
 #popup-price{
-    color: var(--darkred);
+    background: var(--gradient-3);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+    background-clip: text;
+    font-weight: 700;
 }
 .popup-contact p {
     font-size: 26px;
