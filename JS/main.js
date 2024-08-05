@@ -252,7 +252,7 @@ const productos = [
               nombre: "Valorant",
               id: "valorant"
           },
-          precio: 3.50,
+          precio: 3.00,
           descripcion: "Pin de gato adorable."
       },
       {
@@ -266,37 +266,7 @@ const productos = [
           },
           precio: 3.50,
           descripcion: "Pin de gato adorable."
-      },
-      {
-        id: "Llavero-19",
-        titulo: "Sova",
-        imagen: "./IMG/sova.jpg",
-        categoria: {
-            nombre: "Valorant",
-            id: "valorant"
-        },
-        precio: 3.50
-       },
-       {
-        id: "Llavero-20",
-        titulo: "Wendy",
-        imagen: "./IMG/wendy.webp",
-        categoria: {
-            nombre: "South-Park",
-            id: "south-park"
-        },
-        precio: 4.00
-     },
-     {
-      id: "Llavero-21",
-      titulo: "Stan",
-      imagen: "./IMG/stan.webp",
-      categoria: {
-          nombre: "South-Park",
-          id: "south-park"
-      },
-      precio: 4.00
-  }
+      }
   ];
 
   const contenedorProductos = document.querySelector("#contenedor_productos");
