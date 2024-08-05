@@ -163,7 +163,7 @@ const productos = [
       id: "PIN-10",
       titulo: "Pin de Bob Esponja",
       imagen: "./IMG/bob.jpg",
-      imagenesCarrusel: ["./IMG/bob.jpg", "./IMG/bob2.jpg"],
+      imagenesCarrusel: ["./IMG/bob.jpg", "./IMG/bob1.jpg"],
       categoria: {
           nombre: "Accion",
           id: "accion"

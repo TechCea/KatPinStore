@@ -863,7 +863,7 @@ main h1{
     height: 24px; /* Ajusta el tamaño del icono */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 668px) {
     
 .content-wrapper {
     margin-top: 80px;
@@ -901,7 +901,7 @@ main h1{
 }
 
 .button {
-    display: inline-flex;
+    
     align-items: center;
     justify-content: center;
     padding: 0.5rem 1rem;
