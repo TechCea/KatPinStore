@@ -96,7 +96,8 @@ const productos = [
             nombre: "Pokemon",
             id: "Pokemon"
         },
-        precio: 3.50
+        precio: 3.50,
+         descripcion: "Pin de gato adorable."
     },
     {
         id: "PIN-05",
@@ -107,7 +108,8 @@ const productos = [
             nombre: "Pokemon",
             id: "pokemon"
         },
-        precio: 3.75
+        precio: 3.50,
+        descripcion: "Pin de gato adorable."
     },
     {
         id: "PIN-06",
@@ -118,127 +120,152 @@ const productos = [
             nombre: "Accion",
             id: "accion"
         },
-        precio: 3.00
+        precio: 3.50,
+        descripcion: "Pin de gato adorable."
     },
     {
-        id: "Llavero-07",
-        titulo: "Giratina",
-        imagen: "./IMG/giratina.webp",
+        id: "PIN-07",
+        titulo: "Pin de Gato Fantasma",
+        imagen: "./IMG/fantasmagato1.jpg",
+        imagenesCarrusel: ["./IMG/fantasmagato1.jpg", "./IMG/fantasmagato2.jpg"],
         categoria: {
             nombre: "Pokemon",
             id: "pokemon"
         },
-        precio: 3.75
+        precio: 3.50,
+        descripcion: "Pin de gato adorable."
     },
     {
-        id: "Llavero-08",
-        titulo: "Michelangelo",
-        imagen: "./IMG/miguelaIMGarticuno.webp.jpg",
+        id: "PIN-08",
+        titulo: "Pin de Gatito",
+        imagen: "./IMG/gattito.jpg",
+        imagenesCarrusel: ["./IMG/gattito.jpg", "./IMG/gattito2.jpg"],
         categoria: {
             nombre: "Accion",
             id: "accion"
         },
-        precio: 3.00
+        precio: 3.50,
+        descripcion: "Pin de gato adorable."
     },
     {
-        id: "Llavero-09",
-        titulo: "Rafael",
-        imagen: "./IMG/rafael.jpg",
+        id: "PIN-09",
+        titulo: "Pin de Gatito",
+        imagen: "./IMG/gattitto.jpg",
+        imagenesCarrusel: ["./IMG/gattitto.jpg", "./IMG/gattitto2.jpg"],
         categoria: {
             nombre: "Accion",
             id: "accion"
         },
-        precio: 3.00
+        precio: 3.50,
+        descripcion: "Pin de gato adorable."
     },
     {
-      id: "Llavero-10",
-      titulo: "Leonardo",
-      imagen: "./IMG/leonardo.jpg",
+      id: "PIN-10",
+      titulo: "Pin de Bob Esponja",
+      imagen: "./IMG/bob.jpg",
+      imagenesCarrusel: ["./IMG/bob.jpg", "./IMG/bob2.jpg"],
       categoria: {
           nombre: "Accion",
           id: "accion"
       },
-      precio: 3.00
+      precio: 3.50,
+      descripcion: "Pin de gato adorable."
      },
      {
-      id: "Llavero-11",
-      titulo: "Asuka",
-      imagen: "./IMG/asuka.jpg",
+      id: "PIN-11",
+      titulo: "Pin de Nintendo",
+      imagen: "./IMG/nintendo.jpg",
+      imagenesCarrusel: ["./IMG/nintendo.jpg", "./IMG/nintendomano.jpg"],
       categoria: {
           nombre: "Anime",
           id: "anime"
       },
-      precio: 3.75
+      precio: 3.50,
+      descripcion: "Pin de gato adorable."
       },
       {
-          id: "Llavero-12",
-          titulo: "Finn",
-          imagen: "./IMG/finn.jpg",
+          id: "PIN-12",
+          titulo: "Pin de Ganyu",
+          imagen: "./IMG/genshi.jpg",
+          imagenesCarrusel: ["./IMG/genshi.jpg", "./IMG/genshi1.jpg"],
           categoria: {
-              nombre: "Accion",
-              id: "accion"
+              nombre: "Genshin Impact",
+              id: "Genshin Impact"
           },
-          precio: 3.50
+          precio: 7.50,
+          descripcion: "Pin de gato adorable."
       },
       {
-          id: "Llavero-13",
-          titulo: "Jake",
-          imagen: "./IMG/jake.jpg",
+          id: "PIN-13",
+          titulo: "Pin de Xiao",
+          imagen: "./IMG/genshin.jpg",
+          imagenesCarrusel: ["./IMG/genshin.jpg", "./IMG/genshin2.jpg"],
           categoria: {
-              nombre: "Accion",
-              id: "accion"
+              nombre: "Genshin Impact",
+              id: "Genshin Impact"
           },
-          precio: 3.50
+          precio: 6.50,
+          descripcion: "Pin de gato adorable."
       },
       {
-          id: "Llavero-14",
-          titulo: "Kenny",
-          imagen: "./IMG/kenny.webp",
+          id: "PIN14",
+          titulo: "Pin de Astronauta",
+          imagen: "./IMG/starastro.jpg",
+          imagenesCarrusel: ["./IMG/starastro.jpg", "./IMG/starastro1.jpg"],
           categoria: {
               nombre: "South-Park",
               id: "south-park"
           },
-          precio: 4.00
+          precio: 3.50,
+          descripcion: "Pin de gato adorable."
       },
       {
-          id: "Llavero-15",
-          titulo: "Killjoy",
-          imagen: "./IMG/killjoy.jpg",
+          id: "PIN-15",
+          titulo: "Pin de Capibara Cumpleañero",
+          imagen: "./IMG/capibaracum.jpg",
+          imagenesCarrusel: ["./IMG/capibaracum.jpg", "./IMG/capibaracum1.jpg"],
           categoria: {
               nombre: "Valorant",
               id: "valorant"
           },
-          precio: 3.50
+          precio: 3.50,
+          descripcion: "Pin de gato adorable."
       },
       {
-          id: "Llavero-16",
-          titulo: "Link",
-          imagen: "./IMG/link.jpg",
+          id: "PIN-16",
+          titulo: "Pin de Gravity Falls",
+          imagen: "./IMG/book1.jpg",
+          imagenesCarrusel: ["./IMG/book1.jpg", "./IMG/book.jpg"],
           categoria: {
               nombre: "Accion",
               id: "accion"
           },
-          precio: 3.50
+          precio: 3.50,
+          descripcion: "Pin de gato adorable."
       },
       {
-          id: "Llavero-17",
-          titulo: "Neon",
-          imagen: "./IMG/neon.jpg",
+          id: "PIN-17",
+          titulo: "Pin de Gatito",
+          imagen: "./IMG/Gatomaceta.jpg",
+          imagenesCarrusel: ["./IMG/Gatomaceta.jpg", "./IMG/Gatomaceta1.jpg"],
           categoria: {
               nombre: "Valorant",
               id: "valorant"
           },
-          precio: 3.50
+          precio: 3.50,
+          descripcion: "Pin de gato adorable."
       },
       {
-          id: "Llavero-18",
-          titulo: "Rayquaza",
-          imagen: "./IMG/rayquaza.webp",
+          id: "PIN-18",
+          titulo: "Pin de Fantasma",
+          imagen: "./IMG/fantasmabook.jpg",
+          imagenesCarrusel: ["./IMG/fantasmabook.jpg", "./IMG/fantasmabook1.jpg"],
           categoria: {
               nombre: "Pokemon",
               id: "pokemon"
           },
-          precio: 4.00
+          precio: 3.50,
+          descripcion: "Pin de gato adorable."
       },
       {
         id: "Llavero-19",
