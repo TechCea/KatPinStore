@@ -873,7 +873,7 @@ main h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     background: var(--gradient-1);
     backdrop-filter: blur(3rem);
@@ -904,8 +904,8 @@ main h1{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1rem;
-    margin: 2.5rem;
+    padding: 0.3rem 0.4rem;
+    margin: 0.5rem;
     margin-top: -40px;
     font-size: 15px;
     font-weight: medium;
