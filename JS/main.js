@@ -139,7 +139,7 @@ const productos = [
         id: "PIN-08",
         titulo: "Pin de Gatito",
         imagen: "./IMG/gattito.jpg",
-        imagenesCarrusel: ["./IMG/gattito.jpg", "./IMG/gattito2.jpg"],
+        imagenesCarrusel: ["./IMG/gattito3.jpg", "./IMG/gattito2.jpg"],
         categoria: {
             nombre: "Accion",
             id: "accion"
