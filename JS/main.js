@@ -101,9 +101,9 @@ const productos = [
     },
     {
         id: "PIN-05",
-        titulo: "Pin de Gato",
-        imagen: "./IMG/gatoflorespin.jpg",
-        imagenesCarrusel: ["./IMG/gatoflorespin.jpg", "./IMG/gatofloresmano.jpg"],
+        titulo: "Pin de Gengar",
+        imagen: "./IMG/gengar.jpg",
+        imagenesCarrusel: ["./IMG/gengar.jpg","./IMG/gengarmano.jpg", "./IMG/gengarmano1.jpg"],
         categoria: {
             nombre: "Pokemon",
             id: "pokemon"
@@ -267,81 +267,101 @@ const productos = [
           precio: 3.50,
           descripcion: "Pin de gato adorable."
       }
+       /*{
+        id: "PIN-19",
+        titulo: "Pin de Gato",
+        imagen: "./IMG/gatoflorespin.jpg",
+        imagenesCarrusel: ["./IMG/gatoflorespin.jpg", "./IMG/gatofloresmano.jpg"],
+        categoria: {
+            nombre: "Pokemon",
+            id: "pokemon"
+        },
+        precio: 3.50,
+        descripcion: "Pin de gato adorable."
+        } */
   ];
 
   const contenedorProductos = document.querySelector("#contenedor_productos");
-const popup = document.querySelector("#product-popup");
-const popupImg = document.querySelector("#popup-img");
-const popupTitle = document.querySelector("#popup-title");
-const popupCategory = document.querySelector("#popup-category");
-const popupPrice = document.querySelector("#popup-price");
-const popupDescription = document.querySelector("#popup-description");
-const closePopup = document.querySelector(".close");
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-
-let currentImageIndex = 0;
-let currentProductImages = [];
-
-function cargarProductos(productosElegidos) {
-    contenedorProductos.innerHTML = "";
-
-    productosElegidos.forEach(producto => {
-        const div = document.createElement("div");
-        div.classList.add("producto");
-        div.innerHTML = `
-            <div class="producto-imagen-container">
-                <div class="producto-titulo-container">
-                    <h2 class="producto-titulo">${producto.titulo}</h2>
-                </div>
-                <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-                <button class="producto-agregar" data-id="${producto.id}">Ver Producto</button>
-            </div>
-        `;
-        contenedorProductos.append(div);
-    });
-
-    document.querySelectorAll(".producto-agregar").forEach(button => {
-        button.addEventListener("click", (e) => {
-            const id = e.target.getAttribute("data-id");
-            const producto = productos.find(p => p.id === id);
-            currentImageIndex = 0;
-            currentProductImages = producto.imagenesCarrusel || [producto.imagen];
-            popupImg.src = currentProductImages[currentImageIndex];
-            popupTitle.textContent = producto.titulo;
-            popupCategory.textContent = ` ${producto.categoria.nombre}`;
-            popupPrice.textContent = `Precio: $ ${producto.precio.toFixed(2)}`;
-            popupDescription.textContent = producto.descripcion;
-            popup.style.display = "flex";
-        });
-    });
-}
-
-function showImage(index) {
-    currentImageIndex = (index + currentProductImages.length) % currentProductImages.length;
-    popupImg.style.transform = "translateX(100%)";
-    setTimeout(() => {
-        popupImg.src = currentProductImages[currentImageIndex];
-        popupImg.style.transform = "translateX(0)";
-    }, 100);
-}
-
-prevButton.addEventListener("click", () => {
-    showImage(currentImageIndex - 1);
-});
-
-nextButton.addEventListener("click", () => {
-    showImage(currentImageIndex + 1);
-});
-
-closePopup.addEventListener("click", () => {
-    popup.style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-    if (e.target === popup) {
-        popup.style.display = "none";
-    }
-});
-
-cargarProductos(productos);
+  const popup = document.querySelector("#product-popup");
+  const popupImg = document.querySelector("#popup-img");
+  const popupTitle = document.querySelector("#popup-title");
+  const popupCategory = document.querySelector("#popup-category");
+  const popupPrice = document.querySelector("#popup-price");
+  const popupDescription = document.querySelector("#popup-description");
+  const closePopup = document.querySelector(".close");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  
+  let currentImageIndex = 0;
+  let currentProductImages = [];
+  
+  function preloadImages(images) {
+      images.forEach((image) => {
+          const img = new Image();
+          img.src = image;
+      });
+  }
+  
+  function cargarProductos(productosElegidos) {
+      contenedorProductos.innerHTML = "";
+  
+      productosElegidos.forEach(producto => {
+          const div = document.createElement("div");
+          div.classList.add("producto");
+          div.innerHTML = `
+              <div class="producto-imagen-container">
+                  <div class="producto-titulo-container">
+                      <h2 class="producto-titulo">${producto.titulo}</h2>
+                  </div>
+                  <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}" loading="lazy">
+                  <button class="producto-agregar" data-id="${producto.id}">Ver Producto</button>
+              </div>
+          `;
+          contenedorProductos.append(div);
+      });
+  
+      document.querySelectorAll(".producto-agregar").forEach(button => {
+          button.addEventListener("click", (e) => {
+              const id = e.target.getAttribute("data-id");
+              const producto = productos.find(p => p.id === id);
+              currentImageIndex = 0;
+              currentProductImages = producto.imagenesCarrusel || [producto.imagen];
+              preloadImages(currentProductImages);
+              popupImg.src = currentProductImages[currentImageIndex];
+              popupTitle.textContent = producto.titulo;
+              popupCategory.textContent = ` ${producto.categoria.nombre}`;
+              popupPrice.textContent = `Precio: $ ${producto.precio.toFixed(2)}`;
+              popupDescription.textContent = producto.descripcion;
+              popup.style.display = "flex";
+          });
+      });
+  }
+  
+  function showImage(index) {
+      currentImageIndex = (index + currentProductImages.length) % currentProductImages.length;
+      popupImg.style.transform = "translateX(100%)";
+      setTimeout(() => {
+          popupImg.src = currentProductImages[currentImageIndex];
+          popupImg.style.transform = "translateX(0)";
+      }, 100);
+  }
+  
+  prevButton.addEventListener("click", () => {
+      showImage(currentImageIndex - 1);
+  });
+  
+  nextButton.addEventListener("click", () => {
+      showImage(currentImageIndex + 1);
+  });
+  
+  closePopup.addEventListener("click", () => {
+      popup.style.display = "none";
+  });
+  
+  window.addEventListener("click", (e) => {
+      if (e.target === popup) {
+          popup.style.display = "none";
+      }
+  });
+  
+  cargarProductos(productos);
