@@ -16,6 +16,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex6 = 0;
     let currentIndex7 = 0;
 
+    // Función para precargar imágenes
+    function preloadImages(imageArray) {
+        imageArray.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+
+    // Precarga de imágenes
+    preloadImages(images6);
+    preloadImages(images7);
+
     function changeImage6() {
         const imageElement6 = document.getElementById('carousel-image-6');
         imageElement6.classList.remove('active');
@@ -52,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 980); // Ajuste de tiempo
     }
 
-    setInterval(changeImage6, 6000); // Cambia cada 5 segundos
-    setInterval(changeImage7, 6000); // Cambia cada 5 segundos
+    setInterval(changeImage6, 6000); // Cambia cada 6 segundos
+    setInterval(changeImage7, 6000); // Cambia cada 6 segundos
 });
 
 
