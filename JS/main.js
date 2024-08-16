@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const productos = [
     {
         id: "PIN-01",
-        titulo: "Pin de Gato Asesino",
+        titulo: "Pin de Gato Asesino 🐈‍⬛🔪",
         imagen: "./IMG/gatoasesinoP.jpg",
         imagenesCarrusel: ["./IMG/gatoasesinoP.jpg", "./IMG/gatoasesinomano.jpeg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
@@ -109,7 +109,7 @@ const productos = [
     },
     {
         id: "PIN-05",
-        titulo: "Pin de Gengar",
+        titulo: "Pin de Gengar 👻👻",
         imagen: "./IMG/gengar.jpg",
         imagenesCarrusel: ["./IMG/gengar.jpg","./IMG/gengarmano.jpg", "./IMG/gengarmano1.jpg"],
         categoria: { nombre: "Pokemon", id: "Pokemon" },
@@ -217,7 +217,7 @@ const productos = [
     },
     {
         id: "PIN-18",
-        titulo: "Pin de Fantasma Espeluznante",
+        titulo: "Pin de Fantasma👻",
         imagen: "./IMG/fantasmabook.jpg",
         imagenesCarrusel: ["./IMG/fantasmabook.jpg", "./IMG/fantasmabook1.jpg"],
         categoria: { nombre: "Horror", id: "horror" },
@@ -235,7 +235,7 @@ const productos = [
     },
     {
         id: "PIN-20",
-        titulo: "Llavero de Vandal Reaver - Valorant",
+        titulo: "Llavero de Vandal Reaver - Valorant 🎮",
         imagen: "./IMG/reaver1.jpg",
         imagenesCarrusel: ["./IMG/reaver1.jpg", "./IMG/reaver2.jpg", "./IMG/reaver3.jpg"],
         categoria: { nombre: "Valorant", id: "Valorant" },
@@ -253,7 +253,7 @@ const productos = [
     },
     {
         id: "PIN-23",
-        titulo: "Pin de Gatito HEI",
+        titulo: "Pin de Gatito HEI 😺",
         imagen: "./IMG/gatitoHEI.jpg",
         imagenesCarrusel: ["./IMG/gatitoHEI.jpg", "./IMG/gatitoHEI1.jpg", "./IMG/gatitoHEI2.jpg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
