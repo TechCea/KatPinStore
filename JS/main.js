@@ -248,7 +248,7 @@ const productos = [
         imagen: "./IMG/jurasick.jpg",
         imagenesCarrusel: ["./IMG/jurasick.jpg", "./IMG/jurasick2.jpg"],
         categoria: { nombre: "Aventura", id: "aventura" }, // Cambié la categoría a 'Aventura' para que sea más relevante
-        precio: 3.50,
+        precio: 2.00,
         descripcion: "Pin de una señal de advertencia con un T-Rex, inspirado en las películas de dinosaurios."
     },
     {
@@ -257,7 +257,7 @@ const productos = [
         imagen: "./IMG/gatitoHEI.jpg",
         imagenesCarrusel: ["./IMG/gatitoHEI.jpg", "./IMG/gatitoHEI2.jpg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
-        precio: 3.50,
+        precio: 3.00,
         descripcion: "Pin de un gatito con una expresión graciosa y estilo cartoon, perfecto para los amantes de los gatos y el humor visual."
     },
     {
@@ -266,7 +266,7 @@ const productos = [
         imagen: "./IMG/jack.jpg",
         imagenesCarrusel: ["./IMG/jack.jpg", "./IMG/jack2.jpg"],
         categoria: { nombre: "Horror", id: "horror" },
-        precio: 3.50,
+        precio: 4.25,
         descripcion: "Pin de Jack Skellington, el icónico personaje de 'El extraño mundo de Jack'. Ideal para los fans del cine de Tim Burton y lo gótico."
     },
 ];
