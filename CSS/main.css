@@ -561,7 +561,7 @@ main h1{
     border-radius: 10px;
     display: flex;
     width: 1100px;
-    height: 400px;
+    height: 450px;
     position: relative;
     z-index: 999;
 }
