@@ -82,12 +82,12 @@ const productos = [
     },
     {
         id: "PIN-02",
-        titulo: "Pin de Gatito Trash",
+        titulo: "Pin de Gatito En Basurero",
         imagen: "./IMG/gatotrash.jpg",
         imagenesCarrusel: ["./IMG/gatotrash.jpg", "./IMG/gatitotrashman.jpg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
         precio: 3.50,
-        descripcion: "Pin de un gatito rebelde en un estilo trash, perfecto para aquellos que aprecian el arte urbano."
+        descripcion: "Pin de un gatito rebelde en un Basurero, perfecto para aquellos que aprecian el arte urbano."
     },
     {
         id: "PIN-03",
@@ -96,7 +96,7 @@ const productos = [
         imagenesCarrusel: ["./IMG/capibara1.jpg", "./IMG/CapibaraMano.jpg"],
         categoria: { nombre: "Animales", id: "animales" },
         precio: 3.50,
-        descripcion: "Pin de una capibara relajada, el roedor más grande y amigable del mundo, en un diseño adorable."
+        descripcion: "Pin de una capibara relajado, el roedor más grande y amigable del mundo, en un diseño adorable."
     },
     {
         id: "PIN-04",
@@ -136,21 +136,21 @@ const productos = [
     },
     {
         id: "PIN-08",
-        titulo: "Pin de Gatito Maceta",
+        titulo: "Pin de Gatito",
         imagen: "./IMG/gattito.jpg",
         imagenesCarrusel: ["./IMG/gattito3.jpg", "./IMG/gattito2.jpg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
         precio: 3.50,
-        descripcion: "Pin de un gatito que emerge de una maceta, combinando la naturaleza con el amor por los gatos."
+        descripcion: "Pin de un gatito trantando de comerse un pescado, perfecto para los amantes de los gatos."
     },
     {
         id: "PIN-09",
-        titulo: "Pin de Gatito Atrapado",
+        titulo: "Pin de Gatito",
         imagen: "./IMG/gattitto.jpg",
         imagenesCarrusel: ["./IMG/gattitto.jpg", "./IMG/gattitto2.jpg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
         precio: 3.50,
-        descripcion: "Pin de un gatito que parece atrapado en una situación cómica, ideal para los que disfrutan del humor felino."
+        descripcion: "Pin de un gatito mordiendo un florero en una situación cómica, ideal para los que disfrutan del humor felino."
     },
     {
         id: "PIN-10",

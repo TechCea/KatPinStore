@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb:hover{
     aspect-ratio: 4 / 4;
     margin-top: -35px;
     display: grid;
-    margin: 110px auto;
+    margin: 50px auto;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
     grid-template-rows: repeat(3, 160px); /* 3 filas de 160px de altura */
     grid-auto-rows: minmax(135px, auto); /* Altura mínima para las filas adicionales */
@@ -379,7 +379,7 @@ body::-webkit-scrollbar-thumb:hover{
         aspect-ratio: 4 / 4;
         margin-top: -35px;
         display: grid;
-        margin: 100px auto;
+        margin: 40px auto;
         grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
         grid-template-rows: repeat(3, 160px); /* 3 filas de 160px de altura */
         grid-auto-rows: minmax(135px, auto); /* Altura mínima para las filas adicionales */
