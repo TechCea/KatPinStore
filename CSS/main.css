@@ -627,6 +627,7 @@ main h1{
 }
 .popup-contact p {
     font-size: 26px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 

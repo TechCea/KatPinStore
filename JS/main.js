@@ -232,7 +232,43 @@ const productos = [
         categoria: { nombre: "Gatos", id: "Gatos" },
         precio: 3.50,
         descripcion: "Pin de un gato adornado con flores, una combinación de naturaleza y felinos para los amantes del arte."
-    }
+    },
+    {
+        id: "PIN-20",
+        titulo: "Llavero de Vandal Reaver - Valorant",
+        imagen: "./IMG/reaver1.jpg",
+        imagenesCarrusel: ["./IMG/reaver1.jpg", "./IMG/reaver2.jpg", "./IMG/reaver3.jpg"],
+        categoria: { nombre: "Valorant", id: "Valorant" },
+        precio: 5.00,
+        descripcion: "Llavero detallado de la Vandal Reaver de Valorant, con un diseño oscuro y elegante para los fanáticos del juego."
+    },
+    {
+        id: "PIN-22",
+        titulo: "Pin de Señal de Advertencia - T-Rex 🦖",
+        imagen: "./IMG/jurasick.jpg",
+        imagenesCarrusel: ["./IMG/jurasick.jpg", "./IMG/jurasick2.jpg"],
+        categoria: { nombre: "Aventura", id: "aventura" }, // Cambié la categoría a 'Aventura' para que sea más relevante
+        precio: 3.50,
+        descripcion: "Pin de una señal de advertencia con un T-Rex, inspirado en las películas de dinosaurios. Ideal para los fans de la aventura y la prehistoria."
+    },
+    {
+        id: "PIN-23",
+        titulo: "Pin de Gatito HEI",
+        imagen: "./IMG/gatitoHEI.jpg",
+        imagenesCarrusel: ["./IMG/gatitoHEI.jpg", "./IMG/gatitoHEI1.jpg", "./IMG/gatitoHEI2.jpg"],
+        categoria: { nombre: "Gatos", id: "Gatos" },
+        precio: 3.50,
+        descripcion: "Pin de un gatito con una expresión graciosa y estilo cartoon, perfecto para los amantes de los gatos y el humor visual."
+    },
+    {
+        id: "PIN-24",
+        titulo: "Pin de Jack Skellington",
+        imagen: "./IMG/jack.jpg",
+        imagenesCarrusel: ["./IMG/jack.jpg", "./IMG/jack2.jpg"],
+        categoria: { nombre: "Horror", id: "horror" },
+        precio: 3.50,
+        descripcion: "Pin de Jack Skellington, el icónico personaje de 'El extraño mundo de Jack'. Ideal para los fans del cine de Tim Burton y lo gótico."
+    },
 ];
 
   const contenedorProductos = document.querySelector("#contenedor_productos");
