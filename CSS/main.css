@@ -1010,6 +1010,79 @@ main h1{
     }
 }
 
+.ofertas-promociones {
+    padding: 3rem 1rem;
+    margin-top: 30px;
+    margin-bottom: 150px;
+    background: var(--gradient-2);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: var(--color-texto);
+    backdrop-filter: blur(3rem);
+    border: solid 1px var(--darkred);
+}
+
+.ofertas-promociones h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-accento);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.promociones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.promocion-item {
+    background-color: var(--color-tarjeta);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.promocion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.promocion-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid var(--color-accento);
+}
+
+.promocion-item .info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.promocion-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--color-accento);
+    margin-bottom: 1rem;
+}
+
+.promocion-item p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+}
+
+.timer {
+    font-size: 1.2rem;
+    color: var(--orangep);
+    font-weight: bold;
+}
+
+
 .end{
     position: fixed;
     width: 100vh;
