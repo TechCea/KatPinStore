@@ -244,18 +244,18 @@ const productos = [
     },
     {
         id: "PIN-22",
-        titulo: "Pin de Señal de Advertencia - T-Rex 🦖",
+        titulo: "Pin Señal de Advertencia T-Rex 🦖",
         imagen: "./IMG/jurasick.jpg",
         imagenesCarrusel: ["./IMG/jurasick.jpg", "./IMG/jurasick2.jpg"],
         categoria: { nombre: "Aventura", id: "aventura" }, // Cambié la categoría a 'Aventura' para que sea más relevante
         precio: 3.50,
-        descripcion: "Pin de una señal de advertencia con un T-Rex, inspirado en las películas de dinosaurios. Ideal para los fans de la aventura y la prehistoria."
+        descripcion: "Pin de una señal de advertencia con un T-Rex, inspirado en las películas de dinosaurios."
     },
     {
         id: "PIN-23",
         titulo: "Pin de Gatito HEI 😺",
         imagen: "./IMG/gatitoHEI.jpg",
-        imagenesCarrusel: ["./IMG/gatitoHEI.jpg", "./IMG/gatitoHEI1.jpg", "./IMG/gatitoHEI2.jpg"],
+        imagenesCarrusel: ["./IMG/gatitoHEI.jpg", "./IMG/gatitoHEI2.jpg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
         precio: 3.50,
         descripcion: "Pin de un gatito con una expresión graciosa y estilo cartoon, perfecto para los amantes de los gatos y el humor visual."
