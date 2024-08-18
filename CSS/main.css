@@ -1037,6 +1037,12 @@ main h1{
         padding: 2rem;
         font-size: 1.5rem;
     }
+
+    & .delivery-p{
+        margin-bottom: 20px;
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
 }
 
 .delivery-info h2 {
