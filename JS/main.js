@@ -199,12 +199,12 @@ const productos = [
     },
     {
         id: "PIN-15",
-        titulo: "Pin de Capibara Cumpleañero",
+        titulo: "Pin de Taco CapiBara",
         imagen: "./IMG/capibaracum.jpg",
         imagenesCarrusel: ["./IMG/capibaracum.jpg", "./IMG/capibaracum1.jpg"],
         categoria: { nombre: "Animales", id: "animales" },
         precio: 3.50,
-        descripcion: "Pin de una capibara celebrando su cumpleaños, con un gorrito festivo y una expresión feliz."
+        descripcion: "Pin de un Taco CapiBara, un divertido Pin con una expresión feliz."
     },
     {
         id: "PIN-17",
