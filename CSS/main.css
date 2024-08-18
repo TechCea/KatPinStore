@@ -694,7 +694,6 @@ main h1{
         max-height: 750px; /* Permite que la altura se ajuste automáticamente */
         position: relative;
 }
-    
 .producto-agregar {
     position: absolute;
     bottom: 10px;
@@ -708,7 +707,6 @@ main h1{
     border: solid 1px var(--red);
     cursor: pointer;
 }
-
 .producto-agregar:hover {
     background: var(--gradient-3);
     color: var(--white);
