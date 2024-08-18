@@ -690,7 +690,7 @@ main h1{
         width: 100%;
         max-width: 600px; /* Ajusta el ancho para pantallas pequeñas */
         height: 100%;
-        max-height: 700px; /* Permite que la altura se ajuste automáticamente */
+        max-height: 800px; /* Permite que la altura se ajuste automáticamente */
         position: relative;
     }
     
@@ -728,7 +728,7 @@ main h1{
 
     .popup-img-container {
         width: 400px;
-        height: auto; /* Ajusta la altura para pantallas pequeñas */
+        height: auto;/* Ajusta la altura para pantallas pequeñas */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -773,7 +773,7 @@ main h1{
     .social-icons {
         display: flex;
         flex-wrap: wrap; /* Permite que los íconos se envuelvan en pantallas pequeñas */
-        gap: 40px; /* Ajusta el espacio entre los íconos */
+        gap: 30px; /* Ajusta el espacio entre los íconos */
         margin-top: 20px;
     }
 
@@ -795,6 +795,7 @@ main h1{
         color: white;
         border: none;
         padding: 10px;
+        font-size: 20px;
         cursor: pointer;
         z-index: 10;
     }
