@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const productos = [
     {
         id: "PIN-01",
-        titulo: "Pin de Gato Asesino 🐈‍⬛🔪",
+        titulo: "Pin de Gato Asesino 🔪",
         imagen: "./IMG/gatoasesinoP.jpg",
         imagenesCarrusel: ["./IMG/gatoasesinoP.jpg", "./IMG/gatoasesinomano.jpeg"],
         categoria: { nombre: "Gatos", id: "Gatos" },
