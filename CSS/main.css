@@ -771,8 +771,9 @@ main h1{
 
     .social-icons {
         display: flex;
-        flex-wrap: wrap; /* Permite que los íconos se envuelvan en pantallas pequeñas */
-        gap: 40px; /* Ajusta el espacio entre los íconos */
+        flex-wrap: wrap;
+        width: 100%; /* Permite que los íconos se envuelvan en pantallas pequeñas */
+        gap: 30%; /* Ajusta el espacio entre los íconos */
         margin-top: 20px;
     }
 
