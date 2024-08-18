@@ -690,7 +690,7 @@ main h1{
         width: 100%;
         max-width: 520px; /* Ajusta el ancho para pantallas pequeñas */
         height: 100%;
-        max-height: 750px; /* Permite que la altura se ajuste automáticamente */
+        max-height: 730px; /* Permite que la altura se ajuste automáticamente */
         position: relative;
     }
     
