@@ -635,7 +635,7 @@ main h1{
 .social-icons {
     display: flex;
     margin-top: 20px;
-    gap: 50px;
+    gap: 40px;
 }
 
 .social-icons a img {
