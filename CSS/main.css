@@ -727,7 +727,7 @@ main h1{
     }
 
     .popup-img-container {
-        max-width: 510px;
+        max-width: 515px;
         height: auto;/* Ajusta la altura para pantallas pequeñas */
         display: flex;
         align-items: center;
